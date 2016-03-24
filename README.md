@@ -1,5 +1,5 @@
 ## Android Beacon 推播、電量資訊查詢 SDK
-### 資策會創研所
+
 > ####檔案說明
 
 * 主要檔案為：BeaconContentSDK、BeaconContentDemo
