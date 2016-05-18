@@ -9,7 +9,7 @@
 
 * 兩種版本都有主要兩種檔案：BeaconContentSDK、BeaconContentDemo
 
-BeaconContentSDK為主體，BeaconContentDemo為範例程式
+  BeaconContentSDK為主體，BeaconContentDemo為範例程式
 
 * SDK 本體，分為包含 Gson (master) 檔案以及不包含 Gson (No_Gson) 檔案兩種，避免使用時原專案中已經有 Gson 檔案造成衝突
 
@@ -26,8 +26,11 @@ BeaconContentSDK為主體，BeaconContentDemo為範例程式
 ---
 
 * 最低版本限制  
+* SDK Version 21 
 ![SDK 2.png](/media/SDK 2.png)  
 
+* SDK Version 18 
+![SDK 6.png](/media/SDK 6.png)
 ---
 
 * 要求權限  
