@@ -2,9 +2,14 @@
 
 > ####檔案說明
 
-* 主要檔案為：BeaconContentSDK、BeaconContentDemo
+* 主要檔案分為兩種版本：
+*   1. 原始版本 (僅支援 SDK version 21 以上)
+*   2. 相容性升級版 (可支援 SDK version 18 以上)
+*   
+* 兩種版本都有主要兩種檔案：BeaconContentSDK、BeaconContentDemo
+*   BeaconContentSDK為主體，BeaconContentDemo為範例程式
 
-* BeaconContentSDK 為 SDK 本體，分為包含 Gson (master) 檔案以及不包含 Gson (No_Gson) 檔案兩種，避免使用時原專案中已經有 Gson 檔案造成衝突
+* SDK 本體，分為包含 Gson (master) 檔案以及不包含 Gson (No_Gson) 檔案兩種，避免使用時原專案中已經有 Gson 檔案造成衝突
 
 * 範例程式 BeaconContentDemo 建議使用 Eclipse 開啟
 
