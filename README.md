@@ -1,6 +1,6 @@
 ## Android Beacon 推播、電量資訊查詢 SDK V2.0
 
-> ####V2.0更新說明
+> ###V2.0更新說明
 
 * 加入偵測 Beacon 功能 (SDK 自動偵測目標 APP 中的 Beacon)
 * 簡化電量更新方式 (偵測 Beacon 時順便更新電量，不需任何額外設定或程式碼)
@@ -8,32 +8,61 @@
 
 ---
 
-> ####檔案說明
+> ###檔案說明
 
 * 主要檔案依開發環境分為兩類：
 
-1. Android Studio
-  * beaconContentSDK_v2.0.aar : SDK 主體 
-  * v2.0_AndroidStudio_Demo.zip : Android Studio 範例程式
-  * proguard-rules.pro : SDK的混淆設定
-  
-2. Eclipse
-由於使用 jar 檔，需要較多的支援檔案
+Android Studio | 說明 |
+------------ | ------------
+beaconContentSDK_v2.0.aar | SDK 主體 |
+v2.0_AndroidStudio_Demo.zip | Android Studio 範例程式 (包含使用步驟說明)|
+proguard-rules.pro | SDK 混淆設定 |
+
+Eclipse | 說明 |
+------------ | ------------
+ | SDK 主體 |
+ | 範例程式 |
 
 
-> ####注意事項
 
-* 切換伺服器方式
+> ###注意事項
 
-在初始化相關物件時，在BeaconContent的參數中輸入IP指定想要連結的伺服器，輸入空字串 "" 將預設使用測試伺服器連線
+### 切換伺服器方式
 
-![SDK 5.png](/media/SDK 5.png)  
+啟動服務時，Intent 的 Extra 參數中輸入 IP 或網域指定想要連結的伺服器，請務必提供
+
+```java
+String server_ip = "your_target_server"; // Both IP and domain name are acceptable.
+
+// Step 2. start scan service and send receiver, requested data to it.
+scanWithKeyReceiver = new ServiceResultReceiver(null);
+Intent serviceIntent = new Intent(MainActivity.this, BeaconContentService.class);
+serviceIntent.putExtra("server_ip", server_ip); // must provide
+serviceIntent.putExtra("app_key", app_key); // must provide
+serviceIntent.putExtra("receiver", scanWithKeyReceiver); // must provide
+```
 ---
 
-* SDK Version 18 
+### 設定 API Level
 
-![SDK 6.png](/media/SDK 6.png)
+###### Android Studio
+
+應用程式的 build.gradle
+```
+defaultConfig {
+        applicationId "tw.org.iii.newsdkdemo"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+```
+###### Eclipse
+
+AndroidManifest.xml
+```
+```
 ---
 
-* 要求權限  
+* 要求權限
 
