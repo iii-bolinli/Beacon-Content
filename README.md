@@ -20,10 +20,13 @@ proguard-rules.pro | SDK 混淆設定 |
 
 Eclipse | 說明 |
 ------------ | ------------
- | SDK 主體 |
- | 範例程式 |
+beaconContentSDK_v2.0.jar | SDK 主體 |
+v2.0_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
+gson-2.2.4.jar | gson jar 檔 |
 
+> 使用 Eclipse 需要混淆的話也可以使用 proguard-rules.pro 中的設定
 
+---
 
 > ###注意事項
 
@@ -50,19 +53,44 @@ serviceIntent.putExtra("receiver", scanWithKeyReceiver); // must provide
 應用程式的 build.gradle
 ```
 defaultConfig {
-        applicationId "tw.org.iii.newsdkdemo"
-        minSdkVersion 18
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
-    }
+    applicationId "tw.org.iii.newsdkdemo"
+    minSdkVersion 18
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+}
 ```
 ###### Eclipse
 
 AndroidManifest.xml
+```xml
+<uses-sdk
+  android:minSdkVersion="18"
+  android:targetSdkVersion="23" />
 ```
-```
+---
+> ### 使用 jar 檔需套用以下設定
 ---
 
 * 要求權限
 
+```xml
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+```
+---
+
+* 引用 SDK 中的服務
+
+AndroidManifest.xml
+
+```xml
+<service
+  android:name="tw.org.iii.beaconcontentsdk.BeaconContentService"
+  android:enabled="true"
+  android:exported="true" />
+```
