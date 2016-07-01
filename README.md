@@ -1,4 +1,8 @@
-## Android Beacon 推播、電量資訊查詢 SDK V2.0
+## Android Beacon 推播、電量資訊查詢 SDK V2.1
+
+> ###V2.1更新說明
+
+* 偵測紀錄
 
 > ###V2.0更新說明
 
@@ -14,7 +18,7 @@
 
 Android Studio | 說明 |
 ------------ | ------------
-beaconContentSDK_v2.0.aar | SDK 主體 |
+beaconContentSDK_v2.1.aar | SDK 主體 |
 v2.0_AndroidStudio_Demo.zip | Android Studio 範例程式 (包含使用步驟說明)|
 proguard-rules.pro | SDK 混淆設定 |
 
