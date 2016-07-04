@@ -1,5 +1,10 @@
 ## Android Beacon 推播、電量資訊查詢 SDK V2.1
 
+
+> #####詳細的使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki).
+
+---
+
 > ###V2.1更新說明
 
 * 偵測紀錄
@@ -19,13 +24,13 @@
 Android Studio | 說明 |
 ------------ | ------------
 beaconContentSDK_v2.1.aar | SDK 主體 |
-v2.0_AndroidStudio_Demo.zip | Android Studio 範例程式 (包含使用步驟說明)|
+v2.1_AndroidStudio_Demo.zip | Android Studio 範例程式 (包含使用步驟說明)|
 proguard-rules.pro | SDK 混淆設定 |
 
 Eclipse | 說明 |
 ------------ | ------------
-beaconContentSDK_v2.0.jar | SDK 主體 |
-v2.0_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
+beaconContentSDK_v2.1.jar | SDK 主體 |
+v2.1_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
 gson-2.2.4.jar | gson jar 檔 |
 
 > 使用 Eclipse 需要混淆的話也可以使用 proguard-rules.pro 中的設定
