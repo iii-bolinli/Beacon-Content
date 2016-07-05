@@ -23,13 +23,15 @@
 
 Android Studio | 說明 |
 ------------ | ------------
-beaconContentSDK_v2.1.aar | SDK 主體 |
+beaconcontentsdk_v2.1_20160704.aar | SDK 主體 |
+beaconcontentsdk_withLog_v2.1_20160705.aar | SDK 主體 開啟 Log 記錄 |
 v2.1_AndroidStudio_Demo.zip | Android Studio 範例程式 (包含使用步驟說明)|
 proguard-rules.pro | SDK 混淆設定 |
 
 Eclipse | 說明 |
 ------------ | ------------
-beaconContentSDK_v2.1.jar | SDK 主體 |
+beaconcontentsdk_v2.1_20160704.jar | SDK 主體 |
+beaconcontentsdk_withLog_v2.1_20160705.jar | SDK 主體 開啟 Log 記錄 |
 v2.1_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
 gson-2.2.4.jar | gson jar 檔 |
 
