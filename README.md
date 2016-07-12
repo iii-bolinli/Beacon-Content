@@ -4,6 +4,11 @@
 > #####詳細的使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki).
 
 ---
+> ###V2.1.1更新說明
+
+* 重新命名 ListBeacons 為 AppBeacon
+* AppBeacon 物件可以取得 Beacon ID，方便與後台資料比對
+* 更新 Demo 為使用 beaconContentByBeaconID() 查詢推播資料
 
 > ###V2.1更新說明
 
