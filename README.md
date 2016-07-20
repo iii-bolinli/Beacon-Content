@@ -1,24 +1,41 @@
-## Android Beacon 推播、電量資訊查詢 SDK V2.1
+## Android Beacon 推播、電量資訊查詢 SDK V2.2
 
 
-> #####詳細的使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki).
+> ###詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki).
 
 ---
-> ###V2.1.1更新說明
+> ###V2.2 更新說明
 
-* 重新命名 ListBeacons 為 AppBeacon
-* AppBeacon 物件可以取得 Beacon ID，方便與後台資料比對
-* 更新 Demo 為使用 beaconContentByBeaconID() 查詢推播資料
+* 回傳資料中新增 Beacon 距離資料
+* 新增相關錯誤訊息回傳，如藍牙不支援、藍牙未開啟、連線失敗等，取得方式與 Beacon 資料相同
 
-> ###V2.1更新說明
+e.g. 只要有不是 Beacon 資料的訊息就 Log 出來：
 
-* 偵測紀錄
+```java
+@SuppressLint("ParcelCreator")
+class ServiceResultReceiver extends ResultReceiver {
+    public ServiceResultReceiver(Handler handler) {
+        super(handler);
+    }
+    @Override
+    protected void onReceiveResult(int resultCode, final Bundle resultData) {
+      if (resultCode != 300){
+        Log.e("msg", resultCode+":"+resultData.getString("Msg"));
+      }
+    }
+}
 
-> ###V2.0更新說明
+```
 
-* 加入偵測 Beacon 功能 (SDK 自動偵測目標 APP 中的 Beacon)
-* 簡化電量更新方式 (偵測 Beacon 時順便更新電量，不需任何額外設定或程式碼)
-* 版本相容性維持 API Level 18 (Android 4.3)
+回傳碼 | 訊息 |
+------------ | ------------
+201 | Device does not support Bluetooth. |
+202 | Bluetooth is not enable. |
+203 | get beacon list http request error. |
+204 | beacon detect log update http request error. |
+205 | update beacon power http request error: (msg) |
+300 | `beacon data` |
+
 
 ---
 
@@ -28,9 +45,9 @@
 
 Android Studio | 說明 |
 ------------ | ------------
-beaconcontentsdk_v2.1_20160704.aar | SDK 主體 |
-beaconcontentsdk_withLog_v2.1_20160705.aar | SDK 主體 開啟 Log 記錄 |
-v2.1_AndroidStudio_Demo.zip | Android Studio 範例程式 (包含使用步驟說明)|
+beaconcontentsdk_v2.2.aar | SDK 主體 |
+beaconcontentsdk_v2.2_withLog.aar | SDK 主體 開啟 Log 記錄 |
+PushMessage_demo.zip | Android Studio 範例程式 (包含使用步驟說明) |
 proguard-rules.pro | SDK 混淆設定 |
 
 Eclipse | 說明 |
