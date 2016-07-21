@@ -1,13 +1,14 @@
 ## Android Beacon 推播、電量資訊查詢 SDK V2.2
 
 
-> ###詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki).
+> ###詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki)
 
 ---
 > ###V2.2 更新說明
 
-* 回傳資料中新增 Beacon 距離資料
+* 回傳資料中新增 Beacon 距離資料詳細使用方法請參考 Wiki [程式說明](https://github.com/iii-bolinli/Beacon-Content/wiki/3.-%E7%A8%8B%E5%BC%8F%E8%AA%AA%E6%98%8E) 第 4 點的說明。
 * 新增相關錯誤訊息回傳，如藍牙不支援、藍牙未開啟、連線失敗等，取得方式與 Beacon 資料相同
+* Android Studio 範例程式更新，提供修改伺服器與參數功能，利用 SDK 偵測附近屬於 Appkey 中的 Beacon，再以列表方式呈現相關訊息及距離，點選 Beacon 後會查詢推播圖片
 
 e.g. 只要有不是 Beacon 資料的訊息就 Log 出來：
 
@@ -36,6 +37,8 @@ class ServiceResultReceiver extends ResultReceiver {
 205 | update beacon power http request error: (msg) |
 300 | `beacon data` |
 
+* Android Studio 範例程式更新，提供修改伺服器與參數功能，利用 SDK 偵測附近屬於 Appkey 中的 Beacon，再以列表方式呈現相關訊息及距離，點選 Beacon 後會查詢推播圖片
+
 
 ---
 
@@ -52,9 +55,9 @@ proguard-rules.pro | SDK 混淆設定 |
 
 Eclipse | 說明 |
 ------------ | ------------
-beaconcontentsdk_v2.1_20160704.jar | SDK 主體 |
-beaconcontentsdk_withLog_v2.1_20160705.jar | SDK 主體 開啟 Log 記錄 |
-v2.1_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
+beaconcontentsdk_v2.2.jar | SDK 主體 |
+beaconcontentsdk_v2.2_withLog.jar | SDK 主體 開啟 Log 記錄 |
+v2.2_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
 gson-2.2.4.jar | gson jar 檔 |
 
 > 使用 Eclipse 需要混淆的話也可以使用 proguard-rules.pro 中的設定
