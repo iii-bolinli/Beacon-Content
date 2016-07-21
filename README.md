@@ -8,7 +8,6 @@
 
 * 回傳資料中新增 Beacon 距離資料詳細使用方法請參考 Wiki [程式說明](https://github.com/iii-bolinli/Beacon-Content/wiki/3.-%E7%A8%8B%E5%BC%8F%E8%AA%AA%E6%98%8E) 第 4 點的說明。
 * 新增相關錯誤訊息回傳，如藍牙不支援、藍牙未開啟、連線失敗等，取得方式與 Beacon 資料相同
-* Android Studio 範例程式更新，提供修改伺服器與參數功能，利用 SDK 偵測附近屬於 Appkey 中的 Beacon，再以列表方式呈現相關訊息及距離，點選 Beacon 後會查詢推播圖片
 
 e.g. 只要有不是 Beacon 資料的訊息就 Log 出來：
 
