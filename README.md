@@ -1,42 +1,14 @@
-## Android Beacon 推播、電量資訊查詢 SDK V2.2
+## Android Beacon 推播、電量資訊查詢 SDK V2.3
 
 
 > ###詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki)
 
 ---
-> ###V2.2 更新說明
 
-* 回傳資料中新增 Beacon 距離資料詳細使用方法請參考 Wiki [程式說明](https://github.com/iii-bolinli/Beacon-Content/wiki/3.-%E7%A8%8B%E5%BC%8F%E8%AA%AA%E6%98%8E) 第 4 點的說明。
-* 新增相關錯誤訊息回傳，如藍牙不支援、藍牙未開啟、連線失敗等，取得方式與 Beacon 資料相同
+> ###V2.3 更新說明
 
-e.g. 只要有不是 Beacon 資料的訊息就 Log 出來：
-
-```java
-@SuppressLint("ParcelCreator")
-class ServiceResultReceiver extends ResultReceiver {
-    public ServiceResultReceiver(Handler handler) {
-        super(handler);
-    }
-    @Override
-    protected void onReceiveResult(int resultCode, final Bundle resultData) {
-      if (resultCode != 300){
-        Log.e("msg", resultCode+":"+resultData.getString("Msg"));
-      }
-    }
-}
-
-```
-
-回傳碼 | 訊息 |
------------- | ------------
-201 | Device does not support Bluetooth. |
-202 | Bluetooth is not enable. |
-203 | get beacon list http request error. |
-204 | beacon detect log update http request error. |
-205 | update beacon power http request error: (msg) |
-300 | `beacon data` |
-
-* Android Studio 範例程式更新，提供修改伺服器與參數功能，利用 SDK 偵測附近屬於 Appkey 中的 Beacon，再以列表方式呈現相關訊息及距離，點選 Beacon 後會查詢推播圖片
+* Beacon 偵測方式修正
+* 移除 beaconContent() 方法，統一使用 beaconContentByBeaconID()
 
 
 ---
@@ -47,16 +19,17 @@ class ServiceResultReceiver extends ResultReceiver {
 
 Android Studio | 說明 |
 ------------ | ------------
-beaconcontentsdk_v2.2.aar | SDK 主體 |
-beaconcontentsdk_v2.2_withLog.aar | SDK 主體 開啟 Log 記錄 |
+beaconcontentsdk_v2.3.aar | SDK 主體 |
+beaconcontentsdk_v2.3_withLog.aar | SDK 主體 開啟 Log 記錄 |
 PushMessage_demo.zip | Android Studio 範例程式 (包含使用步驟說明) |
 proguard-rules.pro | SDK 混淆設定 |
+proguard-rules-withLog.pro | SDK 混淆設定 |
 
 Eclipse | 說明 |
 ------------ | ------------
-beaconcontentsdk_v2.2.jar | SDK 主體 |
-beaconcontentsdk_v2.2_withLog.jar | SDK 主體 開啟 Log 記錄 |
-v2.2_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
+beaconcontentsdk_v2.3.jar | SDK 主體 |
+beaconcontentsdk_v2.3_withLog.jar | SDK 主體 開啟 Log 記錄 |
+v2.3_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
 gson-2.2.4.jar | gson jar 檔 |
 
 > 使用 Eclipse 需要混淆的話也可以使用 proguard-rules.pro 中的設定
