@@ -1,14 +1,14 @@
-## Android Beacon 推播、電量資訊查詢 SDK V2.3
+## Android Beacon 推播、電量資訊查詢 SDK V2.4
 
 
 > ###詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki)
 
 ---
 
-> ###V2.3 更新說明
+> ###V2.4 更新說明
 
-* Beacon 偵測方式修正
-* 移除 beaconContent() 方法，統一使用 beaconContentByBeaconID()
+* 回歸並修正 beaconContent() 方法，可以使用 SDK 回傳之 uuid 進行推播查詢
+* 增加偵測中狀態碼回傳，詳情請參考『功能與物件說明』
 
 
 ---
@@ -19,17 +19,17 @@
 
 Android Studio | 說明 |
 ------------ | ------------
-beaconcontentsdk_v2.3.aar | SDK 主體 |
-beaconcontentsdk_v2.3_withLog.aar | SDK 主體 開啟 Log 記錄 |
+beaconcontentsdk_v2.4.aar | SDK 主體 |
+beaconcontentsdk_v2.4_withLog.aar | SDK 主體 開啟 Log 記錄 |
 PushMessage_demo.zip | Android Studio 範例程式 (包含使用步驟說明) |
 proguard-rules.pro | SDK 混淆設定 |
 proguard-rules-withLog.pro | SDK 混淆設定 |
 
 Eclipse | 說明 |
 ------------ | ------------
-beaconcontentsdk_v2.3.jar | SDK 主體 |
-beaconcontentsdk_v2.3_withLog.jar | SDK 主體 開啟 Log 記錄 |
-v2.3_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
+beaconcontentsdk_v2.4.jar | SDK 主體 |
+beaconcontentsdk_v2.4_withLog.jar | SDK 主體 開啟 Log 記錄 |
+v2.4_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
 gson-2.2.4.jar | gson jar 檔 |
 
 > 使用 Eclipse 需要混淆的話也可以使用 proguard-rules.pro 中的設定
