@@ -1,18 +1,18 @@
 ## Android Beacon 推播、電量資訊查詢 SDK V2.6
 
-##此版本開始不支援 Eclipse 的相關檔案更新
+## 此版本開始不支援 Eclipse 的相關檔案更新
 
-###詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki)
+### 詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki)
 
 ---
 
-###V2.6 更新說明
+### V2.6 更新說明
 
 * 新增純文字、超連結兩種版型
 
 ---
 
-###檔案說明
+### 檔案說明
 
 Android Studio | 說明 |
 ------------ | ------------
@@ -25,7 +25,7 @@ proguard-rules-withLog.pro | SDK 混淆設定 |
 
 ---
 
-###注意事項
+### 注意事項
 
 ### 切換伺服器方式
 
