@@ -1,38 +1,27 @@
-## Android Beacon 推播、電量資訊查詢 SDK V2.5
+## Android Beacon 推播、電量資訊查詢 SDK V2.6
 
+> ##此版本開始不支援 Eclipse 的相關檔案更新
 
 > ###詳細使用說明可以參考 [Wiki](https://github.com/iii-bolinli/Beacon-Content/wiki)
 
 ---
 
-> ###V2.5 更新說明
+> ###V2.6 更新說明
 
-* 增加偵測 Beacon 種類
-* 回傳 Beacon 資訊增加 rssi, tx_power
-
+* 新增純文字、超連結兩種版型
 
 ---
 
 > ###檔案說明
 
-* 主要檔案依開發環境分為兩類：
-
 Android Studio | 說明 |
 ------------ | ------------
-beaconcontentsdk_v2.5.aar | SDK 主體 |
-beaconcontentsdk_v2.5_withLog.aar | SDK 主體 開啟 Log 記錄 |
+beaconcontentsdk_v2.6.aar | SDK 主體 |
+beaconcontentsdk_v2.6_withLog.aar | SDK 主體 開啟 Log 記錄 |
 PushMessage_demo.zip | Android Studio 範例程式 (包含使用步驟說明) |
 proguard-rules.pro | SDK 混淆設定 |
 proguard-rules-withLog.pro | SDK 混淆設定 |
 
-Eclipse | 說明 |
------------- | ------------
-beaconcontentsdk_v2.5.jar | SDK 主體 |
-beaconcontentsdk_v2.5_withLog.jar | SDK 主體 開啟 Log 記錄 |
-v2.5_Eclipse_demo.zip | Eclipse 範例程式 (包含使用步驟說明)|
-gson-2.2.4.jar | gson jar 檔 |
-
-> 使用 Eclipse 需要混淆的話也可以使用 proguard-rules.pro 中的設定
 
 ---
 
@@ -67,38 +56,4 @@ defaultConfig {
     versionCode 1
     versionName "1.0"
 }
-```
-###### Eclipse
-
-AndroidManifest.xml
-```xml
-<uses-sdk
-  android:minSdkVersion="18"
-  android:targetSdkVersion="23" />
-```
----
-> ### 使用 jar 檔需套用以下設定
----
-
-* 要求權限
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.BLUETOOTH" />
-<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-```
----
-
-* 引用 SDK 中的服務
-
-AndroidManifest.xml
-
-```xml
-<service
-  android:name="tw.org.iii.beaconcontentsdk.BeaconContentService"
-  android:enabled="true"
-  android:exported="true" />
 ```

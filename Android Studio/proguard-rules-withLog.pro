@@ -38,3 +38,14 @@
 -keepclassmembers class tw.org.iii.beaconcontentsdk.BeaconContent** {*;}
 
 -keep class tw.org.iii.beaconcontentsdk.BeaconContentService
+
+-keep class www.linctronix.com.lincbeaconlib
+-keepclassmembers class www.linctronix.com.lincbeaconlib** {*;}
+
+-keep class com.akr.android.beacon.BeaconData
+-keepclassmembers class com.akr.android.beacon.BeaconData** {*;}
+
+-keep class com.akr.android.beacon.CrytoCannex
+-keepclassmembers class com.akr.android.beacon.CrytoCannex** {*;}
+
+-keepattributes InnerClasses
