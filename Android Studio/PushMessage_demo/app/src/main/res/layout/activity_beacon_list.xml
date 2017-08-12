@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context="iii.org.tw.pushmessage_demo.BeaconListActivity">
+
+    <Button
+        android:id="@+id/setting_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting" />
+
+    <LinearLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/stop_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Stop" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/SDK_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_above="@+id/control"
+        android:background="#ddd" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/SDK_status"
+        android:textAlignment="center"
+        android:layout_below="@+id/setting_btn"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true" />
+
+</RelativeLayout>

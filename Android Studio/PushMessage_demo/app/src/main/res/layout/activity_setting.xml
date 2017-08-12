@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="iii.org.tw.pushmessage_demo.SettingActivity">
+
+    <TextView
+        android:id="@+id/current_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0000CC"
+        android:text="Current App Key"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/current_key_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_key"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_key_content"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:textColor="#0000CC"
+            android:layout_height="wrap_content"
+            android:text="Server IP"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/server_ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:textColor="#0000CC"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:text="App Key"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/app_key"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView3"
+        android:inputType="textMultiLine"
+        android:maxLines="1" />
+
+    <Spinner
+        android:id="@+id/appKeySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_key"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setting_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Confirm"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/setting_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>
