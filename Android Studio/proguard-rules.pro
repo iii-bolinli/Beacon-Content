@@ -48,4 +48,7 @@
 -keep class com.akr.android.beacon.CrytoCannex
 -keepclassmembers class com.akr.android.beacon.CrytoCannex** {*;}
 
+-keep class tw.org.iii.beaconcontentsdk.OpenAlarm
+-keepclassmembers class tw.org.iii.beaconcontentsdk.OpenAlarm** {*;}
+
 -assumenosideeffects class android.util.Log { *; }
