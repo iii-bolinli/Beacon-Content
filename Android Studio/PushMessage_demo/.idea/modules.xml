@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PushMessage_demo.iml" filepath="$PROJECT_DIR$/PushMessage_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/beaconcontentsdk_v2.7_withLog/beaconcontentsdk_v2.7_withLog.iml" filepath="$PROJECT_DIR$/beaconcontentsdk_v2.7_withLog/beaconcontentsdk_v2.7_withLog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beaconcontentsdk_v2.7.1_withLog/beaconcontentsdk_v2.7.1_withLog.iml" filepath="$PROJECT_DIR$/beaconcontentsdk_v2.7.1_withLog/beaconcontentsdk_v2.7.1_withLog.iml" />
     </modules>
   </component>
 </project>

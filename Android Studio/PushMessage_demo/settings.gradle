@@ -1,1 +1,1 @@
-include ':app', ':beaconcontentsdk_v2.7_withLog'
+include ':app', ':beaconcontentsdk_v2.7.1_withLog'
