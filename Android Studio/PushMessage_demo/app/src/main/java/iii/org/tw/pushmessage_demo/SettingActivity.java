@@ -32,7 +32,7 @@ public class SettingActivity extends AppCompatActivity {
 
         SharedPreferences appData = getApplication().getSharedPreferences("PushMessage", 0);
         getAppKey = appData.getString("app_key", "36101de29093fad767e5b1a751036bccf37f3580");
-        getServerIp = appData.getString("server_ip", "iiibeacon.net");
+        getServerIp = appData.getString("server_ip", "ideas.iiibeacon.net");
         current_key_content.setText(getAppKey);
         server_ip.setText(getServerIp);
 

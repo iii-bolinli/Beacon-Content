@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('beaconcontentsdk_v2.7.2_withLog.aar'))

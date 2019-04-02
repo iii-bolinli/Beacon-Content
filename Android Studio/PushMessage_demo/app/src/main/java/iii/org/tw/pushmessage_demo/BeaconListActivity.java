@@ -62,7 +62,7 @@ public class BeaconListActivity extends AppCompatActivity {
         }
 
         SharedPreferences appData = getApplication().getSharedPreferences("PushMessage", 0);
-        server_ip = appData.getString("server_ip", "iiibeacon.net");
+        server_ip = appData.getString("server_ip", "ideas.iiibeacon.net");
         app_key = appData.getString("app_key", "36101de29093fad767e5b1a751036bccf37f3580");
 
         findView();
